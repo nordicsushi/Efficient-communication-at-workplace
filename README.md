@@ -15,37 +15,10 @@ Meeting Mind Flow is a practical resource for software engineers and tech profes
 ### Meeting Types Covered
 
 1. **Daily Stand-up Meeting** (Attendee)
-   - Duration: 2-3 minutes per person
-   - Focus: Progress updates, today's plans, blockers
-
 2. **Weekly Stand-up Meeting** (Attendee)
-   - Duration: 3-5 minutes per person
-   - Focus: Weekly achievements, goals, learnings, risks
-
 3. **Knowledge Sharing Meeting** (Facilitator/Chair)
-   - Duration: 30-60 minutes
-   - Focus: Introducing presenters, managing Q&A, time management
-
 4. **Technical Meeting / Code Review** (Presenter/Communicator)
-   - Duration: 15-45 minutes
-   - Focus: Context setting, solution presentation, feedback gathering
 
-## 📁 Project Structure
-
-```
-Efficient-communication-at-workplace/
-├── README.md                           # This file
-├── run.sh                              # Automation script
-├── render_prompts.py                   # Template rendering script
-├── requirements.txt                    # Python dependencies
-├── coordinator-template.md             # Template for coordinator
-├── coordinator.md                      # Generated coordinator (output)
-├── examples/
-│   ├── task-stage-1-output.md          # Mermaid diagrams for all meeting types
-│   └── task-stage-2-output.md          # Natural expressions for each speaking step
-└── .github/
-    └── copilot-instructions.md         # Instructions for GitHub Copilot
-```
 
 ## 🚀 How to Run
 
@@ -53,8 +26,7 @@ This project includes an automated script to generate customized coordinator doc
 
 ### Prerequisites
 - Python 3.10 or higher
-- `uv` package manager (or `pip`)
-- GitHub Copilot CLI (optional, for AI-assisted task completion)
+- [GitHub Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)
 
 ### Quick Start
 
