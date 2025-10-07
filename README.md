@@ -47,7 +47,7 @@ This project includes an automated script to generate customized coordinator doc
    # Specify AI model (default: claude-sonnet-4.5)
    ./run.sh --model "claude-sonnet-4" --job "Machine Learning Engineer" --yoe 3 --company "OpenAI"
    
-   # Use different job titles (underscores or dashes work)
+   # Use different job titles
    ./run.sh --job "Senior Data Scientist" --yoe 8 --company "Meta"
    ```
 
