@@ -1,6 +1,7 @@
 ## Task
 Here are the requirements for completing this task: 
 - Your goal is to create one Mermaid diagram demonstrating the speaking flow for each type of meeting that I can apply.  
+- Important: in the Mermaid diagram, always use blue nodes to represent action steps where the speaker needs to communicate.
 - You don't need to specify the exact words I should say, but rather provide a workflow format that I can use every time I speak, which also clearly conveys what I need to express to others.  
 - You should create the mind flow based on the meeting type and the speaker's role (presenter, attendee, facilitator, one-on-one, etc.) 
 - The mind flow you create should be as natural as how a person who is excellent at communication and speaking would handle it. 
