@@ -1,184 +1,144 @@
-# Stage 1 Output: Mermaid Diagrams for Speaking Flow
+# Stage 1 Output: Speaking Flow Diagrams
 
-This document contains Mermaid diagrams demonstrating the speaking flow for various meeting types. Blue nodes represent action steps where the speaker needs to communicate.
+This document contains Mermaid diagrams demonstrating the speaking flow for different meeting types tailored for an ML Engineer with 5 years of experience at Google.
 
----
-
-## Case 1: Daily Stand-up Meeting (Attendee Role)
+## Case 1: Daily Stand-up Meeting (Attendee)
 
 <div align="center">
 
 ```mermaid
 graph TD
-    A[Join Meeting] --> B[Listen to Moderator]
-    B --> C[Wait for Turn]
-    C --> D[Greet Team]
-    D --> E[Share Yesterday's Progress]
-    E --> F[Share Today's Plan]
-    F --> G[Mention Blockers if Any]
-    G --> H[Listen to Other Teammates]
-    H --> I{Need to Follow Up?}
-    I -->|Yes| J[Ask Clarifying Questions]
-    I -->|No| K[Take Notes]
-    J --> K
-    K --> L{All Team Members Done?}
-    L -->|No| H
-    L -->|Yes| M[Thank Team and Sign Off]
-    M --> N[End Meeting]
-    
-    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    Start([Join Meeting]) --> A1[Listen actively to ongoing updates]
+    A1 --> A2[Wait for your turn]
+    A2 --> B1[Greet the team briefly]
+    B1 --> B2[Share yesterday's accomplishments]
+    B2 --> B3[Outline today's planned work]
+    B3 --> B4[Mention any blockers or dependencies]
+    B4 --> C1[Listen to other teammates' updates]
+    C1 --> C2{Need to follow up?}
+    C2 -->|Yes| C3[Ask clarifying questions or offer help]
+    C2 -->|No| C4[Acknowledge and take notes]
+    C3 --> End([Meeting Continues])
+    C4 --> End
+
+    style B1 fill:#4A90E2,color:#fff
+    style B2 fill:#4A90E2,color:#fff
+    style B3 fill:#4A90E2,color:#fff
+    style B4 fill:#4A90E2,color:#fff
+    style C3 fill:#4A90E2,color:#fff
 ```
 
 </div>
 
----
-
-## Case 2: Weekly Stand-up Meeting (Attendee Role)
+## Case 2: Weekly Stand-up Meeting (Attendee)
 
 <div align="center">
 
 ```mermaid
 graph TD
-    A[Join Meeting] --> B[Listen to Moderator]
-    B --> C[Wait for Turn]
-    C --> D[Greet Team]
-    D --> E[Summarize Last Week's Achievements]
-    E --> F[Highlight Key Milestones Completed]
-    F --> G[Share This Week's Priorities]
-    G --> H[Mention Blockers or Dependencies]
-    H --> I[Request Support if Needed]
-    I --> J[Listen to Other Teammates]
-    J --> K{Need to Follow Up?}
-    K -->|Yes| L[Ask Questions or Offer Help]
-    K -->|No| M[Take Notes]
-    L --> M
-    M --> N{All Team Members Done?}
-    N -->|No| J
-    N -->|Yes| O[Thank Team and Confirm Next Steps]
-    O --> P[End Meeting]
-    
-    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style H fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style L fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    Start([Join Meeting]) --> A1[Listen actively to ongoing updates]
+    A1 --> A2[Wait for your turn]
+    A2 --> B1[Greet the team]
+    B1 --> B2[Summarize last week's key achievements]
+    B2 --> B3[Highlight significant ML metrics or model improvements]
+    B3 --> B4[Outline this week's priorities and goals]
+    B4 --> B5[Discuss any blockers or resource needs]
+    B5 --> C1[Listen to other teammates' updates]
+    C1 --> C2{Need to follow up or collaborate?}
+    C2 -->|Yes| C3[Propose collaboration or offer assistance]
+    C2 -->|No| C4[Acknowledge and note action items]
+    C3 --> End([Meeting Continues])
+    C4 --> End
+
+    style B1 fill:#4A90E2,color:#fff
+    style B2 fill:#4A90E2,color:#fff
+    style B3 fill:#4A90E2,color:#fff
+    style B4 fill:#4A90E2,color:#fff
+    style B5 fill:#4A90E2,color:#fff
+    style C3 fill:#4A90E2,color:#fff
 ```
 
 </div>
 
----
-
-## Case 3: Knowledge Sharing Meeting (Facilitator Role)
+## Case 3: Knowledge Sharing Meeting (Facilitator)
 
 <div align="center">
 
 ```mermaid
 graph TD
-    A[Start Meeting on Time] --> B[Welcome Attendees]
-    B --> C[Provide Opening Remarks]
-    C --> D[Introduce Topic]
-    D --> E[Introduce Presenter]
-    E --> F[Hand Over to Presenter]
-    F --> G[Monitor Time During Presentation]
-    G --> H{Presentation Complete?}
-    H -->|No| G
-    H -->|Yes| I[Thank Presenter]
-    I --> J[Open Floor for Q&A]
-    J --> K{Questions from Audience?}
-    K -->|Yes| L[Facilitate Q&A]
-    K -->|No| M[Encourage Questions]
-    L --> N{More Questions?}
-    N -->|Yes| L
-    N -->|No| O[Thank Presenter Again]
-    M --> O
-    O --> P[Summarize Key Takeaways]
-    P --> Q[Share Follow-up Resources]
-    Q --> R[Announce Next Session]
-    R --> S[Thank Everyone and Close]
-    S --> T[End Meeting]
-    
-    style B fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style C fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style L fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style P fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style Q fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style R fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    Start([Meeting Start Time]) --> A1[Welcome everyone as they join]
+    A1 --> A2[Wait for attendees to settle in]
+    A2 --> B1[Open the meeting with greeting]
+    B1 --> B2[Provide context for the session]
+    B2 --> B3[Introduce the presenter with background]
+    B3 --> B4[Introduce the topic and its relevance]
+    B4 --> B5[Set expectations for Q&A format]
+    B5 --> C1[Hand over to presenter]
+    C1 --> C2[Monitor presentation and time]
+    C2 --> D1{Q&A time?}
+    D1 -->|Yes| D2[Facilitate Q&A session]
+    D1 -->|No| E1[Summarize key takeaways]
+    D2 --> E1
+    E1 --> E2[Thank the presenter]
+    E2 --> E3[Provide closing remarks]
+    E3 --> E4[Announce next session details if applicable]
+    E4 --> End([End Meeting])
+
+    style B1 fill:#4A90E2,color:#fff
+    style B2 fill:#4A90E2,color:#fff
+    style B3 fill:#4A90E2,color:#fff
+    style B4 fill:#4A90E2,color:#fff
+    style B5 fill:#4A90E2,color:#fff
+    style D2 fill:#4A90E2,color:#fff
+    style E1 fill:#4A90E2,color:#fff
+    style E2 fill:#4A90E2,color:#fff
+    style E3 fill:#4A90E2,color:#fff
+    style E4 fill:#4A90E2,color:#fff
 ```
 
 </div>
 
----
-
-## Case 4: Technical Meeting / Code Review (Communicator/Presenter Role)
+## Case 4: Technical Meeting / Code Review (Presenter/Communicator)
 
 <div align="center">
 
 ```mermaid
 graph TD
-    A[Join Meeting] --> B[Greet Attendees]
-    B --> C[Set Context and Agenda]
-    C --> D[Explain Background of Technical Issue]
-    D --> E[Describe Current State]
-    E --> F[Identify Problem or Challenge]
-    F --> G[Present Proposed Solution]
-    G --> H[Walk Through Technical Details]
-    H --> I[Explain Trade-offs and Alternatives]
-    I --> J[Share Implementation Plan]
-    J --> K[Invite Questions and Feedback]
-    K --> L{Questions or Concerns?}
-    L -->|Yes| M[Address Questions]
-    M --> N{More Questions?}
-    N -->|Yes| M
-    N -->|No| O[Acknowledge Feedback]
-    L -->|No| O
-    O --> P[Discuss and Align on Next Steps]
-    P --> Q[Assign Action Items]
-    Q --> R[Confirm Timeline]
-    R --> S[Thank Participants]
-    S --> T[End Meeting]
-    
-    style B fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style C fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style H fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style K fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style P fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style Q fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style R fill:#4A90E2,stroke:#2E5C8A,color:#fff
-    style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    Start([Meeting Scheduled]) --> A1[Prepare materials and context]
+    A1 --> B1[Greet attendees and thank them for joining]
+    B1 --> B2[State the purpose and agenda of the meeting]
+    B2 --> B3[Provide background context of the technical issue]
+    B3 --> B4[Explain why this issue matters to the team/project]
+    B4 --> C1[Present the technical problem in detail]
+    C1 --> C2[Walk through code or system architecture]
+    C2 --> C3[Propose solution approach and alternatives]
+    C3 --> C4[Explain trade-offs and your recommendation]
+    C4 --> D1[Open floor for questions and feedback]
+    D1 --> D2{Concerns or suggestions raised?}
+    D2 -->|Yes| D3[Address concerns and discuss alternatives]
+    D2 -->|No| E1[Summarize agreement or key points]
+    D3 --> D4{Need more discussion?}
+    D4 -->|Yes| D1
+    D4 -->|No| E1
+    E1 --> E2[Outline next steps and action items]
+    E2 --> E3[Assign ownership and deadlines]
+    E3 --> E4[Thank everyone for their input]
+    E4 --> End([End Meeting])
+
+    style B1 fill:#4A90E2,color:#fff
+    style B2 fill:#4A90E2,color:#fff
+    style B3 fill:#4A90E2,color:#fff
+    style B4 fill:#4A90E2,color:#fff
+    style C1 fill:#4A90E2,color:#fff
+    style C2 fill:#4A90E2,color:#fff
+    style C3 fill:#4A90E2,color:#fff
+    style C4 fill:#4A90E2,color:#fff
+    style D1 fill:#4A90E2,color:#fff
+    style D3 fill:#4A90E2,color:#fff
+    style E1 fill:#4A90E2,color:#fff
+    style E2 fill:#4A90E2,color:#fff
+    style E3 fill:#4A90E2,color:#fff
+    style E4 fill:#4A90E2,color:#fff
 ```
 
 </div>
-
----
-
-## Summary
-
-These Mermaid diagrams provide reusable speaking flows tailored for a DevOps Engineer at Google with 5 years of experience. Each diagram:
-- Uses blue nodes to highlight communication action steps
-- Follows natural communication patterns used in tech companies
-- Provides a structured yet flexible framework for effective workplace communication
-- Adapts to different meeting types and speaker roles
