@@ -44,7 +44,7 @@ This project includes an automated script to generate customized coordinator doc
 
 3. **Customize with different parameters:**
    ```bash
-   # Specify AI model (default: gpt-5)
+   # Specify AI model (default: claude-sonnet-4.5)
    ./run.sh --model "claude-sonnet-4" --job "Machine Learning Engineer" --yoe 3 --company "OpenAI"
    
    # Use different job titles (underscores or dashes work)
@@ -62,12 +62,6 @@ This project includes an automated script to generate customized coordinator doc
 1. Open `examples/task-stage-2-output.md` to browse ready-to-use expressions
 2. Find your meeting type and specific speaking step
 3. Choose an expression that fits your situation and personal style
-
-### Color Legend in Diagrams
-- 🟢 **Green nodes**: Start of the flow
-- 🩷 **Pink nodes**: End of the flow
-- 🟡 **Yellow nodes**: Decision points requiring judgment
-- 🔵 **Blue nodes**: Regular action steps (speaking points)
 
 ## 💡 Key Features
 
@@ -90,56 +84,83 @@ Here's a complete example showing both the communication flow and ready-to-use e
 ### Flow Diagram
 
 ```mermaid
-flowchart TD
-    Start(["Join Meeting"]) --> Listen["Listen to Previous Speaker"]
-    Listen --> YourTurn{"Your Turn?"}
-    YourTurn -->|No| Listen
-    YourTurn -->|Yes| Greet["Brief Greeting"]
-    Greet --> Yesterday["Share Yesterday's Progress<br/>- Completed tasks<br/>- Key achievements"]
-    Yesterday --> Today["Share Today's Plans<br/>- Main focus areas<br/>- Expected deliverables"]
-    Today --> Blockers{"Any Blockers?"}
-    Blockers -->|Yes| ShareBlockers["Clearly describe blocker<br/>- What is blocked<br/>- What help is needed"]
-    Blockers -->|No| CheckDependencies["Mention dependencies<br/>on other team members"]
-    ShareBlockers --> CheckDependencies
-    CheckDependencies --> Brief["Keep it brief<br/>2-3 minutes max"]
-    Brief --> TakeNotes["Take notes during<br/>others' updates"]
-    TakeNotes --> NeedFollowup{"Need Follow-up?"}
-    NeedFollowup -->|Yes| Followup["Schedule follow-up<br/>after standup"]
-    NeedFollowup -->|No| End(["Meeting Ends"])
-    Followup --> End
+graph TD
+    A[Join Meeting] --> B[Listen to Moderator]
+    B --> C[Wait for Turn]
+    C --> D[Greet Team]
+    D --> E[Share Yesterday's Progress]
+    E --> F[Share Today's Plan]
+    F --> G[Mention Blockers if Any]
+    G --> H[Listen to Other Teammates]
+    H --> I{Need to Follow Up?}
+    I -->|Yes| J[Ask Clarifying Questions]
+    I -->|No| K[Take Notes]
+    J --> K
+    K --> L{All Team Members Done?}
+    L -->|No| H
+    L -->|Yes| M[Thank Team and Sign Off]
+    M --> N[End Meeting]
     
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style Blockers fill:#FFE4B5
-    style NeedFollowup fill:#FFE4B5
+    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
 ### Sample Expressions
 
-#### 1. Brief Greeting
-- "Hey everyone, good morning!"
-- "Morning all!"
-- "Hey team, how's it going?"
+#### Case 1: Daily Stand-up Meeting (Attendee Role)
 
-#### 2. Share Yesterday's Progress
-- "So yesterday I wrapped up the authentication module and got all the unit tests passing. Pretty happy with how that turned out."
-- "Yesterday I knocked out those three bugs we had in the backlog - the login issue, the timeout problem, and that weird caching thing."
-- "So I spent most of yesterday refactoring the payment service. Got it cleaned up and the code's way more maintainable now."
+##### Greet Team
 
-#### 3. Share Today's Plans
-- "Today I'm jumping into the notification service. Planning to get the basic email templates done and maybe start on the push notification logic if I have time."
-- "So today I'm gonna focus on code review for the team and then start working on that new dashboard feature we prioritized yesterday."
-- "Today's pretty straightforward - I need to finish up the documentation for the API changes and then I'll start the performance optimization work."
+1. "Hey everyone, good morning!"
+2. "Morning team!"
+3. "Hey folks, hope everyone's doing well today."
+4. "Good morning all!"
+5. "Hey team, thanks for joining."
 
-#### 4. Describe Blocker (if applicable)
-- "I'm actually stuck on something - I need access to the production logs to debug this issue, but I don't have the right permissions. Could someone help me out with that?"
-- "Yeah, so I hit a blocker yesterday. The third-party API we're integrating with is returning inconsistent responses and I'm not sure if it's on our end or theirs. Might need to jump on a call with their support."
-- "Running into an issue with the CI pipeline - it keeps failing on the deployment step and I can't figure out why. Could use a second pair of eyes on this."
+##### Share Yesterday's Progress
 
-#### 5. Mention Dependencies
-- "Just a heads up - I'll need those API specs from Jordan before I can finish the integration work."
-- "I'm depending on Lisa's PR being merged before I can start testing my changes, so hopefully that goes through today."
-- "Once Marcus finishes the authentication updates, I'll be able to hook up the user permissions on my end."
+1. "So yesterday I wrapped up the CI/CD pipeline migration for the staging environment. Got everything tested and deployed."
+2. "Yesterday was pretty productive - I finished up the monitoring dashboard refactoring and deployed it to production."
+3. "I spent most of yesterday debugging the deployment issues we had with the Kubernetes cluster. Got that sorted out and everything's running smoothly now."
+4. "Yesterday I knocked out the ticket for automating the backup scripts. Also did a quick review on Sarah's PR for the infrastructure changes."
+5. "I made good progress on the Terraform modules yesterday. Got through about 70% of the refactoring work."
+
+##### Share Today's Plan
+
+1. "Today I'm planning to start on the load balancer configuration for the new microservice and hopefully get that done by end of day."
+2. "For today, I'll be focusing on the security audit follow-ups. Want to get those critical findings addressed first."
+3. "I'm going to continue with the database migration prep work today, and I also have that meeting with the security team this afternoon."
+4. "Today's all about getting the monitoring alerts fine-tuned. I've been getting too many false positives, so want to clean that up."
+5. "I'll be working on the Docker image optimization today. Also want to pair with Mike on the networking issue if he has time."
+
+##### Mention Blockers if Any
+
+1. "No blockers on my end."
+2. "Everything's good here, no blockers."
+3. "I do have one blocker actually - I'm waiting on the security team to approve those firewall rule changes before I can proceed with the deployment."
+4. "Just a heads up, I'm a bit blocked on the API integration. Need access to the production credentials, so if someone from the platform team could help me out with that, that'd be great."
+5. "All good here, though I might need some input from the architecture team later this week on the scaling strategy."
+
+##### Ask Clarifying Questions
+
+1. "Hey Sarah, just a quick question on what you mentioned - are you saying the issue is happening in all environments or just production?"
+2. "Mike, when you say you're refactoring the auth service, does that impact the endpoints we're currently using, or is it all backward compatible?"
+3. "Quick follow-up on that - do we need to coordinate our deployments, or can I go ahead with mine independently?"
+4. "Just to clarify, is that something we need to prioritize this week, or can it wait until next sprint?"
+5. "That sounds interesting - could you drop a link to that doc in the chat? I'd like to take a look."
+
+##### Thank Team and Sign Off
+
+1. "Alright, sounds good everyone. Thanks, and have a great day!"
+2. "Cool, thanks team. Catch you all later!"
+3. "Perfect, appreciate the updates everyone. Have a good one!"
+4. "Great, thanks all. See you tomorrow!"
+5. "Awesome, thanks everyone. Let me know if you need anything from me."
+
 
 **💡 Tip:** Mix and match expressions to find your natural speaking style. The goal is to sound professional yet conversational!
 

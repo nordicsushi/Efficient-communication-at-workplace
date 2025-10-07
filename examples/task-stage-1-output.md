@@ -1,188 +1,168 @@
-# Meeting Speaking Flow Diagrams
+# Stage 1 Output: Mermaid Diagrams for Speaking Flow
 
-This folder contains Mermaid flowcharts for effective communication patterns in various meeting types within a tech company.
-
-## Files
-## How to Use
-### Color Legend
-- 🟢 **Green nodes**: Start of the flow
-- 🩷 **Pink nodes**: End of the flow
-- 🟡 **Yellow nodes**: Decision points requiring your judgment
-- 🔵 **Blue nodes**: Regular action steps
-
-## Tips for Success
-
-1. **Be concise**: Respect everyone's time
-2. **Be prepared**: Know what you want to say before the meeting
-3. **Be clear**: Use simple language and avoid jargon when possible
-4. **Be engaged**: Listen actively to others
-5. **Be positive**: Maintain a constructive tone
-6. **Follow up**: Always close the loop on action items
-
-## Meeting Types Covered
-
-### Case 1: Daily Stand-up Meeting
-**Role:** Attendee  
-**Duration:** 2-3 minutes per person  
-**Focus:** Yesterday's work, today's plans, blockers
-
-### Case 2: Weekly Stand-up Meeting
-**Role:** Attendee  
-**Duration:** 3-5 minutes per person  
-**Focus:** Last week's achievements, this week's goals, learnings
-
-### Case 3: Knowledge Sharing Meeting
-**Role:** Facilitator/Chair  
-**Duration:** 30-60 minutes  
-**Focus:** Introducing presenter, managing Q&A, time management
-
-### Case 4: Technical Meeting / Code Review
-**Role:** Communicator/Presenter  
-**Duration:** 15-45 minutes  
-**Focus:** Context, solution presentation, feedback gathering
+This document contains Mermaid diagrams demonstrating the speaking flow for various meeting types. Blue nodes represent action steps where the speaker needs to communicate.
 
 ---
 
-**Note:** These flows are designed for tech company environments and can be adapted to your specific team culture and needs.
-
----
-
-## Case 1: Daily Stand-up Meeting (Attendee)
-
-- Daily Stand-up Meeting (Attendee)
-   - Natural flow for sharing progress, plans, and blockers
-   - Emphasizes brevity (2-3 minutes)
-   - Includes decision points for blockers and follow-ups
+## Case 1: Daily Stand-up Meeting (Attendee Role)
 
 ```mermaid
-flowchart TD
-    Start(["Join Meeting"]) --> Listen["Listen to Previous Speaker"]
-    Listen --> YourTurn{"Your Turn?"}
-    YourTurn -->|No| Listen
-    YourTurn -->|Yes| Greet["Brief Greeting"]
-    Greet --> Yesterday["Share Yesterday's Progress<br/>- Completed tasks<br/>- Key achievements"]
-    Yesterday --> Today["Share Today's Plans<br/>- Main focus areas<br/>- Expected deliverables"]
-    Today --> Blockers{"Any Blockers?"}
-    Blockers -->|Yes| ShareBlockers["Clearly describe blocker<br/>- What is blocked<br/>- What help is needed"]
-    Blockers -->|No| CheckDependencies["Mention dependencies<br/>on other team members"]
-    ShareBlockers --> CheckDependencies
-    CheckDependencies --> Brief["Keep it brief<br/>2-3 minutes max"]
-    Brief --> TakeNotes["Take notes during<br/>others' updates"]
-    TakeNotes --> NeedFollowup{"Need Follow-up?"}
-    NeedFollowup -->|Yes| Followup["Schedule follow-up<br/>after standup"]
-    NeedFollowup -->|No| End(["Meeting Ends"])
-    Followup --> End
+graph TD
+    A[Join Meeting] --> B[Listen to Moderator]
+    B --> C[Wait for Turn]
+    C --> D[Greet Team]
+    D --> E[Share Yesterday's Progress]
+    E --> F[Share Today's Plan]
+    F --> G[Mention Blockers if Any]
+    G --> H[Listen to Other Teammates]
+    H --> I{Need to Follow Up?}
+    I -->|Yes| J[Ask Clarifying Questions]
+    I -->|No| K[Take Notes]
+    J --> K
+    K --> L{All Team Members Done?}
+    L -->|No| H
+    L -->|Yes| M[Thank Team and Sign Off]
+    M --> N[End Meeting]
     
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style Blockers fill:#FFE4B5
-    style NeedFollowup fill:#FFE4B5
+    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
 ---
 
-## Case 2: Weekly Stand-up Meeting (Attendee)
-- Weekly Stand-up Meeting (Attendee)
-   - Extended version of daily standup with weekly perspective
-   - Includes sections for key learnings and insights
-   - Covers cross-team dependencies and risk management
+## Case 2: Weekly Stand-up Meeting (Attendee Role)
 
 ```mermaid
-flowchart TD
-    Start(["Join Weekly Meeting"]) --> Listen["Listen to Previous Speaker"]
-    Listen --> YourTurn{"Your Turn?"}
-    YourTurn -->|No| Listen
-    YourTurn -->|Yes| Greet["Brief Greeting"]
-    Greet --> LastWeek["Share Last Week's Progress<br/>- Major accomplishments<br/>- Completed features/tasks<br/>- Key metrics if applicable"]
-    LastWeek --> ThisWeek["Share This Week's Plans<br/>- Main objectives<br/>- Expected deliverables<br/>- Timeline for tasks"]
-    ThisWeek --> Blockers{"Any Blockers<br/>or Risks?"}
-    Blockers -->|Yes| ShareBlockers["Describe blocker/risk<br/>- Impact on timeline<br/>- Support needed"]
-    Blockers -->|No| CrossTeam["Mention cross-team<br/>dependencies"]
-    ShareBlockers --> CrossTeam
-    CrossTeam --> Learnings{"Key Learnings<br/>to Share?"}
-    Learnings -->|Yes| ShareLearnings["Share insights<br/>- Technical discoveries<br/>- Process improvements"]
-    Learnings -->|No| Summarize["Summarize key points<br/>3-5 minutes max"]
-    ShareLearnings --> Summarize
-    Summarize --> TakeNotes["Take notes during<br/>others' updates"]
-    TakeNotes --> NeedFollowup{"Need Follow-up?"}
-    NeedFollowup -->|Yes| Followup["Schedule follow-up<br/>meetings or discussions"]
-    NeedFollowup -->|No| End(["Meeting Ends"])
-    Followup --> End
+graph TD
+    A[Join Meeting] --> B[Listen to Moderator]
+    B --> C[Wait for Turn]
+    C --> D[Greet Team]
+    D --> E[Summarize Last Week's Achievements]
+    E --> F[Highlight Key Milestones Completed]
+    F --> G[Share This Week's Priorities]
+    G --> H[Mention Blockers or Dependencies]
+    H --> I[Request Support if Needed]
+    I --> J[Listen to Other Teammates]
+    J --> K{Need to Follow Up?}
+    K -->|Yes| L[Ask Questions or Offer Help]
+    K -->|No| M[Take Notes]
+    L --> M
+    M --> N{All Team Members Done?}
+    N -->|No| J
+    N -->|Yes| O[Thank Team and Confirm Next Steps]
+    O --> P[End Meeting]
     
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style Blockers fill:#FFE4B5
-    style Learnings fill:#FFE4B5
-    style NeedFollowup fill:#FFE4B5
+    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style H fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style L fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
 ---
 
-## Case 3: Knowledge Sharing Meeting (Facilitator)
-- Knowledge Sharing Meeting (Facilitator)
-   - Complete facilitator workflow from preparation to closing
-   - Includes time management and Q&A facilitation
-   - Emphasizes creating a welcoming environment
+## Case 3: Knowledge Sharing Meeting (Facilitator Role)
+
 ```mermaid
-flowchart TD
-    Start(["5 Minutes Before Meeting"]) --> Prepare["Check setup<br/>- Presenter ready?<br/>- Screen sharing works?<br/>- Recording ready?"]
-    Prepare --> MeetingStart["Start Meeting on Time"]
-    MeetingStart --> Welcome["Welcome Everyone<br/>- Warm greeting<br/>- Thank attendees for joining"]
-    Welcome --> Housekeeping["Brief Housekeeping<br/>- Meeting duration<br/>- Q&A format<br/>- Recording notice"]
-    Housekeeping --> IntroPresenter["Introduce Presenter<br/>- Name and role<br/>- Relevant background<br/>- Why this topic matters"]
-    IntroPresenter --> IntroTopic["Introduce Topic<br/>- Brief overview<br/>- What attendees will learn<br/>- Set expectations"]
-    IntroTopic --> HandOver["Hand over to Presenter<br/>with enthusiasm"]
-    HandOver --> Monitor["Monitor Session<br/>- Watch time<br/>- Track chat questions<br/>- Note engagement"]
-    Monitor --> TimeCheck{"Time for Q&A?"}
-    TimeCheck -->|Yes| ManageQA["Facilitate Q&A<br/>- Read chat questions<br/>- Encourage participation<br/>- Keep discussions on track"]
-    TimeCheck -->|No| Monitor
-    ManageQA --> TimeWarning{"5 Min<br/>Remaining?"}
-    TimeWarning -->|Yes| WrapUp["Signal wrap-up time<br/>to presenter"]
-    TimeWarning -->|No| ManageQA
-    WrapUp --> ThankPresenter["Thank Presenter<br/>- Highlight key takeaways<br/>- Appreciate their time"]
-    ThankPresenter --> ShareResources["Share Resources<br/>- Recording link<br/>- Slides/materials<br/>- Follow-up contacts"]
-    ShareResources --> ThankAttendees["Thank Attendees<br/>- Encourage feedback<br/>- Preview next session"]
-    ThankAttendees --> End(["Close Meeting"])
+graph TD
+    A[Start Meeting on Time] --> B[Welcome Attendees]
+    B --> C[Provide Opening Remarks]
+    C --> D[Introduce Topic]
+    D --> E[Introduce Presenter]
+    E --> F[Hand Over to Presenter]
+    F --> G[Monitor Time During Presentation]
+    G --> H{Presentation Complete?}
+    H -->|No| G
+    H -->|Yes| I[Thank Presenter]
+    I --> J[Open Floor for Q&A]
+    J --> K{Questions from Audience?}
+    K -->|Yes| L[Facilitate Q&A]
+    K -->|No| M[Encourage Questions]
+    L --> N{More Questions?}
+    N -->|Yes| L
+    N -->|No| O[Thank Presenter Again]
+    M --> O
+    O --> P[Summarize Key Takeaways]
+    P --> Q[Share Follow-up Resources]
+    Q --> R[Announce Next Session]
+    R --> S[Thank Everyone and Close]
+    S --> T[End Meeting]
     
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style TimeCheck fill:#FFE4B5
-    style TimeWarning fill:#FFE4B5
+    style B fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style C fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style L fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style P fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style Q fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style R fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
 ---
 
-## Case 4: Technical Meeting / Code Review (Communicator)
-- Technical Meeting / Code Review (Communicator)
-   - Structured approach for technical discussions
-   - Covers context setting, solution presentation, and feedback collection
-   - Emphasizes active listening and clear next steps
-
+## Case 4: Technical Meeting / Code Review (Communicator/Presenter Role)
 
 ```mermaid
-flowchart TD
-    Start(["Initiate Meeting"]) --> Greet["Greet Colleagues<br/>Thank them for joining"]
-    Greet --> SetContext["Set Context<br/>- What system/feature<br/>- Why this review is needed<br/>- Scope of discussion"]
-    SetContext --> Background["Provide Background<br/>- Current situation<br/>- Problem discovered<br/>- Impact on users/system"]
-    Background --> ShowCode{"Show Code?"}
-    ShowCode -->|Yes| ShareScreen["Share screen<br/>Walk through code"]
-    ShowCode -->|No| Explain["Explain technical details<br/>- Architecture<br/>- Components involved"]
-    ShareScreen --> Explain
-    Explain --> Solution["Present Solution<br/>- Proposed approach<br/>- Why this solution<br/>- Alternatives considered"]
-    Solution --> ShowImplementation["Show Implementation<br/>- Key code changes<br/>- Test coverage<br/>- Performance considerations"]
-    ShowImplementation --> TradeOffs["Discuss Trade-offs<br/>- Pros and cons<br/>- Risks identified<br/>- Mitigation strategies"]
-    TradeOffs --> AskFeedback["Ask for Feedback<br/>- Open the floor<br/>- Specific questions<br/>- Concerns?"]
-    AskFeedback --> Listen["Listen Actively<br/>- Take notes<br/>- Acknowledge points<br/>- Ask clarifying questions"]
-    Listen --> MoreFeedback{"More<br/>Feedback?"}
-    MoreFeedback -->|Yes| Listen
-    MoreFeedback -->|No| Summarize["Summarize Discussion<br/>- Key feedback received<br/>- Action items<br/>- Decisions made"]
-    Summarize --> NextSteps["Define Next Steps<br/>- Who does what<br/>- Timeline<br/>- Follow-up meeting if needed"]
-    NextSteps --> Document["Mention Documentation<br/>- Meeting notes<br/>- Code review comments<br/>- Ticket updates"]
-    Document --> Thank["Thank Colleagues<br/>for their input<br/>and time"]
-    Thank --> End(["Close Meeting"])
+graph TD
+    A[Join Meeting] --> B[Greet Attendees]
+    B --> C[Set Context and Agenda]
+    C --> D[Explain Background of Technical Issue]
+    D --> E[Describe Current State]
+    E --> F[Identify Problem or Challenge]
+    F --> G[Present Proposed Solution]
+    G --> H[Walk Through Technical Details]
+    H --> I[Explain Trade-offs and Alternatives]
+    I --> J[Share Implementation Plan]
+    J --> K[Invite Questions and Feedback]
+    K --> L{Questions or Concerns?}
+    L -->|Yes| M[Address Questions]
+    M --> N{More Questions?}
+    N -->|Yes| M
+    N -->|No| O[Acknowledge Feedback]
+    L -->|No| O
+    O --> P[Discuss and Align on Next Steps]
+    P --> Q[Assign Action Items]
+    Q --> R[Confirm Timeline]
+    R --> S[Thank Participants]
+    S --> T[End Meeting]
     
-    style Start fill:#90EE90
-    style End fill:#FFB6C1
-    style ShowCode fill:#FFE4B5
-    style MoreFeedback fill:#FFE4B5
+    style B fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style C fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style D fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style E fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style F fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style G fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style H fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style I fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style K fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style P fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style Q fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style R fill:#4A90E2,stroke:#2E5C8A,color:#fff
+    style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
+
+---
+
+## Summary
+
+These Mermaid diagrams provide reusable speaking flows tailored for a DevOps Engineer at Google with 5 years of experience. Each diagram:
+- Uses blue nodes to highlight communication action steps
+- Follows natural communication patterns used in tech companies
+- Provides a structured yet flexible framework for effective workplace communication
+- Adapts to different meeting types and speaker roles
