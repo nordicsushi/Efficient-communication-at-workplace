@@ -2,7 +2,7 @@
 set -e
 
 # Default model
-MODEL="gpt-5"
+MODEL="claude-sonnet-4.5"
 
 # Parse model argument if provided
 while [[ $# -gt 0 ]]; do
@@ -48,4 +48,3 @@ echo -e "${GREEN}✅ Script completed successfully!${NC}"
 # Run Copilot CLI
 echo -e "${YELLOW}🤖 Running Copilot CLI with model: ${MODEL}${NC}"
 copilot --model "$MODEL" --add-dir . --allow-all-tools -p "Complete the task in the coordinator.md."
- 
