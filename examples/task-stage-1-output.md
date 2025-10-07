@@ -4,12 +4,6 @@ This folder contains Mermaid flowcharts for effective communication patterns in 
 
 ## Files
 ## How to Use
-
-### Viewing Diagrams
-- Open any `.mmd` file in VS Code
-- Use the Mermaid preview extension to visualize the flowchart
-- Each diagram shows a complete speaking flow for that meeting type
-
 ### Color Legend
 - 🟢 **Green nodes**: Start of the flow
 - 🩷 **Pink nodes**: End of the flow
