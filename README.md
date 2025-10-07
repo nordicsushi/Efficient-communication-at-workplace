@@ -9,6 +9,9 @@ Meeting Mind Flow is a practical resource for software engineers and tech profes
 - **Visual flowcharts** showing the natural progression of communication in different meeting types
 - **Ready-to-use expressions** for each step of the conversation
 - **Natural, conversational language** that sounds professional yet approachable
+- **Customizable outputs** tailored to your specific job role, years of experience (YoE), job responsibilities and company context
+
+The automated script allows you to generate personalized communication guides that match your unique professional profile, making the content more relevant and actionable for your specific situation.
 
 ## 🎯 What's Inside
 
@@ -47,8 +50,8 @@ This project includes an automated script to generate customized coordinator doc
    # Specify AI model (default: claude-sonnet-4.5)
    ./run.sh --model "claude-sonnet-4" --job "Machine Learning Engineer" --yoe 3 --company "OpenAI"
    
-   # Use different job titles
-   ./run.sh --job "Senior Data Scientist" --yoe 8 --company "Meta"
+   # With multi-word job responsibilities
+   ./run.sh --jr "Lead technical architecture and mentor junior developers" --yoe 8 --company "Meta"
    ```
 
 ## 📖 How to Use the Resources
@@ -82,6 +85,7 @@ Each speaking step includes 5 different expressions, giving you:
 Here's a complete example showing both the communication flow and ready-to-use expressions for a daily stand-up meeting.
 
 ### Flow Diagram
+<div align="center">
 
 ```mermaid
 graph TD
@@ -108,6 +112,8 @@ graph TD
     style J fill:#4A90E2,stroke:#2E5C8A,color:#fff
     style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
+
+</div>
 
 ### Sample Expressions
 

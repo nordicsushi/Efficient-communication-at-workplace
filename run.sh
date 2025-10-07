@@ -4,15 +4,25 @@ set -e
 # Default model
 MODEL="claude-sonnet-4.5"
 
-# Parse model argument if provided
+# Array to hold arguments to pass to Python script
+PYTHON_ARGS=()
+
+# Parse arguments
 while [[ $# -gt 0 ]]; do
     case $1 in
         --model)
             MODEL="$2"
             shift 2
             ;;
+        --job|--yoe|--company|--jr)
+            # Collect these arguments for Python script
+            PYTHON_ARGS+=("$1" "$2")
+            shift 2
+            ;;
         *)
-            break
+            # Unknown option, pass it through
+            PYTHON_ARGS+=("$1")
+            shift
             ;;
     esac
 done
@@ -41,10 +51,10 @@ uv pip install -r requirements.txt
 
 # Run render_prompts.py with all passed arguments
 echo -e "${YELLOW}🎯 Running render_prompts.py...${NC}"
-python render_prompts.py "$@"
+python render_prompts.py "${PYTHON_ARGS[@]}"
 
 echo -e "${GREEN}✅ Script completed successfully!${NC}"
 
-# Run Copilot CLI
+# # Run Copilot CLI
 echo -e "${YELLOW}🤖 Running Copilot CLI with model: ${MODEL}${NC}"
 copilot --model "$MODEL" --add-dir . --allow-all-tools -p "Complete the task in the coordinator.md."

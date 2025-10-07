@@ -27,6 +27,7 @@ def validate_input(ctx: dict[str, str | float]) -> None:
         job: str
         yoe: float
         company: str
+        jr: str
 
         @field_validator("yoe", mode="after")
         @classmethod
@@ -45,16 +46,21 @@ def main():
 
     parser.add_argument(
         "--job",
-        default="Machine_Learning_Engineer",
-        help="Example field: Machine_Learning_Engineer",
+        default="Machine Learning Engineer",
+        help="Example field: Machine Learning Engineer",
     )
     parser.add_argument("--yoe", default="3", help="Example field: years of experience")
+    parser.add_argument("--jr", default="", help="Example field: job responsibilities")
     parser.add_argument("--company", default="OpenAI", help="Example field: company")
 
     args = parser.parse_args()
 
     # Collect context
     ctx: dict[str, str | float] = {}
+
+    if args.jr == "":
+        with open("job_responsibilities.txt") as f:
+            ctx["jr"] = f.read()
 
     # Then override with example fields
     if args.job is not None:
