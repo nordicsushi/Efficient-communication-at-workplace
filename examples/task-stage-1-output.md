@@ -6,6 +6,8 @@ This document contains Mermaid diagrams demonstrating the speaking flow for vari
 
 ## Case 1: Daily Stand-up Meeting (Attendee Role)
 
+<div align="center">
+
 ```mermaid
 graph TD
     A[Join Meeting] --> B[Listen to Moderator]
@@ -32,9 +34,13 @@ graph TD
     style M fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
+</div>
+
 ---
 
 ## Case 2: Weekly Stand-up Meeting (Attendee Role)
+
+<div align="center">
 
 ```mermaid
 graph TD
@@ -66,9 +72,13 @@ graph TD
     style O fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
+</div>
+
 ---
 
 ## Case 3: Knowledge Sharing Meeting (Facilitator Role)
+
+<div align="center">
 
 ```mermaid
 graph TD
@@ -111,9 +121,13 @@ graph TD
     style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
 
+</div>
+
 ---
 
 ## Case 4: Technical Meeting / Code Review (Communicator/Presenter Role)
+
+<div align="center">
 
 ```mermaid
 graph TD
@@ -156,6 +170,8 @@ graph TD
     style R fill:#4A90E2,stroke:#2E5C8A,color:#fff
     style S fill:#4A90E2,stroke:#2E5C8A,color:#fff
 ```
+
+</div>
 
 ---
 
