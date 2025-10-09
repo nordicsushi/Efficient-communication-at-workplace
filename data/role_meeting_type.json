@@ -1,0 +1,828 @@
+[
+  {
+    "role": "Software Engineer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      26
+    ],
+    "job responsibility": [
+      "1. Design, implement, and maintain scalable, reliable software features and services",
+      "2. Write clean, readable, well-tested code following team standards and patterns",
+      "3. Participate in code reviews, providing constructive feedback and knowledge sharing",
+      "4. Collaborate with product, design, and QA to refine requirements and acceptance criteria",
+      "5. Debug production issues, perform root-cause analysis, and implement robust fixes",
+      "6. Optimize application performance, memory usage, and resource utilization",
+      "7. Write unit, integration, and end-to-end tests to ensure quality and prevent regressions",
+      "8. Document system designs, APIs, and operational runbooks for maintainability",
+      "9. Automate build, test, and deployment workflows to improve delivery speed and reliability",
+      "10. Adhere to security best practices and monitor for vulnerabilities across dependencies"
+    ]
+  },
+  {
+    "role": "Front-end Engineer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Build responsive, accessible, and performant user interfaces using modern frameworks",
+      "2. Translate design prototypes into reusable components with consistent design systems",
+      "3. Manage application state, routing, and data fetching for robust UX flows",
+      "4. Implement client-side performance optimizations and Core Web Vitals improvements",
+      "5. Ensure cross-browser and cross-device compatibility and accessibility (WCAG) compliance",
+      "6. Collaborate with designers on UI/UX refinements through rapid prototyping and feedback",
+      "7. Write comprehensive unit and integration tests for UI components and interactions",
+      "8. Monitor and fix front-end production issues using logging and RUM tools",
+      "9. Define and maintain front-end build tooling, bundling, and CI/CD pipelines",
+      "10. Document UI components, patterns, and usage in a shared component library"
+    ]
+  },
+  {
+    "role": "Back-end Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design, implement, and operate resilient APIs, services, and data pipelines",
+      "2. Model data and design schemas for relational and NoSQL databases",
+      "3. Ensure system reliability with proper error handling, retries, and idempotency",
+      "4. Optimize query performance, caching, and service throughput under load",
+      "5. Implement authentication, authorization, and secure data handling practices",
+      "6. Instrument services with metrics, logs, and traces for observability",
+      "7. Write automated tests and contract tests for stable service integrations",
+      "8. Support incident response, on-call rotations, and post-incident reviews",
+      "9. Automate infrastructure and deployments using IaC and CI/CD best practices",
+      "10. Document service interfaces, dependencies, and operational processes"
+    ]
+  },
+  {
+    "role": "Full-stack Engineer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Deliver end-to-end features spanning UI, APIs, and data storage layers",
+      "2. Collaborate across disciplines to refine scope, technical design, and UX",
+      "3. Implement reusable front-end components and robust back-end endpoints",
+      "4. Manage application state, data contracts, and API versioning for stability",
+      "5. Maintain database migrations, indexing strategies, and performance tuning",
+      "6. Write automated tests across the stack and ensure CI stability",
+      "7. Set up observability to trace requests across front-end and back-end systems",
+      "8. Harden security across the stack including input validation and secret management",
+      "9. Participate in grooming, estimation, and iterative delivery practices",
+      "10. Document architecture decisions and trade-offs for cross-team visibility"
+    ]
+  },
+  {
+    "role": "iOS Developer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Build and maintain native iOS applications using Swift and relevant frameworks",
+      "2. Implement UIKit/SwiftUI views with accessibility and performance in mind",
+      "3. Integrate with REST/GraphQL APIs and handle offline storage and sync",
+      "4. Manage app navigation, state, and background tasks reliably",
+      "5. Write unit/UI tests and configure CI for automated builds and TestFlight",
+      "6. Profile and optimize app startup time, rendering, and memory usage",
+      "7. Ensure App Store guideline compliance and prepare release notes and submissions",
+      "8. Implement secure data handling, keychain usage, and privacy permissions",
+      "9. Monitor crash reports and analytics to identify and fix user-impacting issues",
+      "10. Collaborate with design to create pixel-perfect, adaptive layouts"
+    ]
+  },
+  {
+    "role": "Android Developer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Develop and maintain native Android apps using Kotlin and Android Jetpack",
+      "2. Architect features with MVVM/MVI and use coroutines/flows for async workflows",
+      "3. Integrate with APIs, manage offline caching, and handle background work (WorkManager)",
+      "4. Ensure UI responsiveness, accessibility, and support for diverse devices and OS versions",
+      "5. Write unit, instrumentation, and UI tests; maintain CI pipelines and Play Console releases",
+      "6. Profile and optimize rendering, battery usage, and app startup performance",
+      "7. Implement secure storage, permissions, and privacy-first data practices",
+      "8. Analyze ANRs and crash logs to drive stability improvements",
+      "9. Collaborate with designers to deliver adaptive layouts for phones and tablets"
+    ]
+  },
+  {
+    "role": "Flutter Developer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Build cross-platform mobile applications using Flutter and Dart with high performance",
+      "2. Create reusable, testable widgets and manage app state (e.g., Provider, Bloc, Riverpod)",
+      "3. Integrate platform-specific features via plugins and platform channels",
+      "4. Consume REST/GraphQL APIs and implement robust error handling and retries",
+      "5. Ensure responsive design, accessibility, and consistent theming across platforms",
+      "6. Write unit, widget, and integration tests; enable fast, reliable CI/CD builds",
+      "7. Profile and optimize rendering performance, jank reduction, and memory usage",
+      "8. Publish apps to app stores and manage versioning, release notes, and rollouts"
+    ]
+  },
+  {
+    "role": "React Native Developer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Develop cross-platform mobile apps with React Native and TypeScript",
+      "2. Build reusable components and maintain a consistent design system across screens",
+      "3. Handle navigation, deep linking, and app lifecycle events reliably",
+      "4. Integrate native modules and third-party SDKs where necessary",
+      "5. Manage application state and async data flows with Redux/Query or similar",
+      "6. Implement performance optimizations for list rendering and animations",
+      "7. Write unit and end-to-end tests and maintain CI for reliable releases",
+      "8. Monitor app stability, crashes, and performance using appropriate tooling"
+    ]
+  },
+  {
+    "role": "Embedded Systems Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design and implement firmware/software for microcontrollers and embedded platforms",
+      "2. Develop low-level drivers, protocols, and real-time control logic",
+      "3. Optimize for constrained resources including memory, CPU cycles, and power",
+      "4. Bring up new hardware, perform board-level debugging, and validate interfaces",
+      "5. Implement robust bootloaders, OTA updates, and secure firmware practices",
+      "6. Use oscilloscopes, logic analyzers, and JTAG for diagnostics and validation",
+      "7. Create test harnesses and automated validation for embedded functionality",
+      "8. Document hardware/software interfaces, timing diagrams, and configuration details"
+    ]
+  },
+  {
+    "role": "Systems Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design, deploy, and maintain reliable compute, storage, and network infrastructure",
+      "2. Automate provisioning, configuration management, and patching across environments",
+      "3. Implement monitoring, logging, and alerting with SLOs and capacity planning",
+      "4. Harden systems with least-privilege, secure configurations, and compliance controls",
+      "5. Troubleshoot complex infrastructure issues spanning OS, network, and applications",
+      "6. Support disaster recovery planning, backups, and periodic failover testing",
+      "7. Collaborate with developers on scalable architectures and release processes",
+      "8. Document runbooks, topology diagrams, and operational procedures"
+    ]
+  },
+  {
+    "role": "Game Developer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Design and implement gameplay systems, mechanics, and user interactions",
+      "2. Collaborate with designers and artists to realize creative vision and UX",
+      "3. Optimize game performance, memory, and asset loading across target platforms",
+      "4. Implement tooling for level design, debugging, and rapid iteration",
+      "5. Integrate networking, save systems, and platform services as needed",
+      "6. Write tests and establish CI for stable builds and regression checks",
+      "7. Profile and fix rendering, physics, and gameplay bottlenecks",
+      "8. Document gameplay systems and technical constraints for cross-team alignment"
+    ]
+  },
+  {
+    "role": "Game Engine Programmer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      26
+    ],
+    "job responsibility": [
+      "1. Develop and optimize core engine systems (rendering, physics, audio, tooling)",
+      "2. Implement scalable asset pipelines and editor extensions for content teams",
+      "3. Profile and optimize low-level performance including memory management and threading",
+      "4. Integrate graphics APIs and advanced rendering techniques for visual fidelity",
+      "5. Ensure cross-platform abstractions and platform-specific optimizations",
+      "6. Write automated tests and validation tools for engine stability",
+      "7. Collaborate with game teams to expose engine features and APIs",
+      "8. Document engine architecture and extension points for internal customers"
+    ]
+  },
+  {
+    "role": "VR/AR Developer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      20,
+      21,
+      24,
+      26
+    ],
+    "job responsibility": [
+      "1. Build immersive VR/AR experiences with optimized interaction and comfort",
+      "2. Prototype and implement spatial UI/UX patterns and input handling",
+      "3. Integrate tracking, sensors, and device SDKs for target platforms",
+      "4. Optimize rendering pipelines to maintain target frame rates and reduce motion sickness",
+      "5. Implement world anchoring, occlusion, and environment understanding features",
+      "6. Conduct usability tests and iterate to improve presence and engagement",
+      "7. Ensure accessibility, safety guidelines, and privacy considerations in experiences",
+      "8. Document scene architecture, interaction models, and performance budgets"
+    ]
+  },
+  {
+    "role": "Firmware Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design, implement, and debug firmware for embedded devices and SoCs",
+      "2. Develop drivers, RTOS tasks, and communication stacks for hardware peripherals",
+      "3. Optimize for timing, power consumption, and memory constraints",
+      "4. Perform board bring-up, interface validation, and hardware-in-the-loop testing",
+      "5. Implement secure boot, OTA updates, and secure firmware storage",
+      "6. Collaborate with hardware teams on schematics review and design validation",
+      "7. Build automated test frameworks and CI for firmware regression testing",
+      "8. Document firmware architecture, state machines, and configuration parameters"
+    ]
+  },
+  {
+    "role": "Blockchain Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design and implement blockchain protocols, nodes, and client libraries",
+      "2. Build and optimize smart contract interactions and transaction pipelines",
+      "3. Ensure security through threat modeling, audits, and formal verification where applicable",
+      "4. Implement consensus, networking, and data storage components for reliability",
+      "5. Optimize throughput, latency, and gas/fee efficiency of blockchain interactions",
+      "6. Integrate with wallets, key management, and secure signing workflows",
+      "7. Contribute to tooling, SDKs, and documentation for developer ecosystems",
+      "8. Monitor network health, forks, and upgrades; participate in incident response"
+    ]
+  },
+  {
+    "role": "Smart Contract Developer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design, implement, and test smart contracts with secure patterns",
+      "2. Write comprehensive unit, integration, and property-based tests for correctness",
+      "3. Perform gas optimization and minimize attack surfaces in contract logic",
+      "4. Document contract interfaces, events, and upgrade/migration strategies",
+      "5. Integrate contracts with dApps, back-ends, and indexing services",
+      "6. Collaborate with auditors to address findings and improve security posture",
+      "7. Monitor on-chain activity and handle incident triage and remediation",
+      "8. Maintain deployment scripts and versioned artifacts across networks"
+    ]
+  },
+  {
+    "role": "Embedded Linux Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Build and customize Linux distributions, kernels, and device drivers",
+      "2. Develop user-space services, daemons, and init systems for embedded products",
+      "3. Optimize boot time, memory footprint, and real-time performance constraints",
+      "4. Integrate hardware peripherals and debug kernel/user-space interactions",
+      "5. Implement secure boot, filesystem integrity, and update mechanisms",
+      "6. Create BSPs, Yocto/Buildroot recipes, and CI builds for reproducible images",
+      "7. Instrument logging and remote diagnostics for field support and maintenance",
+      "8. Document build processes, configuration options, and board support details"
+    ]
+  },
+  {
+    "role": "Firmware Validation Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Develop test plans and automated test frameworks for firmware and hardware",
+      "2. Design and execute functional, regression, and system-level validation tests",
+      "3. Set up HIL test benches and simulate edge conditions and faults",
+      "4. Analyze logs, waveforms, and performance metrics to identify issues",
+      "5. Collaborate with engineers to isolate defects and drive corrective actions",
+      "6. Track test coverage, defects, and release readiness with clear reporting",
+      "7. Maintain lab equipment, scripts, and fixtures for reliable test execution",
+      "8. Document validation results, procedures, and troubleshooting guides"
+    ]
+  },
+  {
+    "role": "Data Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design, build, and maintain scalable data pipelines and ETL/ELT processes",
+      "2. Model and maintain data warehouses and lakes for analytics and ML",
+      "3. Ensure data quality, lineage, and observability across ingestion and transformation",
+      "4. Optimize query performance, partitioning, and storage formats for efficiency",
+      "5. Implement data governance, security, and privacy controls across platforms",
+      "6. Collaborate with analytics and ML teams to provision reliable data sets",
+      "7. Automate infrastructure with IaC and manage orchestration with schedulers",
+      "8. Document data contracts, schemas, and operational runbooks"
+    ]
+  },
+  {
+    "role": "Data Analyst",
+    "meeting": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      15,
+      20,
+      21,
+      24
+    ],
+    "job responsibility": [
+      "1. Analyze datasets to generate insights, trends, and actionable recommendations",
+      "2. Build dashboards and reports to track KPIs and business performance",
+      "3. Design experiments and conduct statistical analysis to validate hypotheses",
+      "4. Partner with stakeholders to translate questions into analytical solutions",
+      "5. Ensure data accuracy through validation, reconciliation, and anomaly detection",
+      "6. Communicate findings clearly through data storytelling and visualization",
+      "7. Document definitions, metrics, and data sources for shared understanding",
+      "8. Support ad-hoc analysis and decision-making with timely deliverables"
+    ]
+  },
+  {
+    "role": "Business Data Analyst",
+    "meeting": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      9,
+      15,
+      20,
+      21
+    ],
+    "job responsibility": [
+      "1. Work with business teams to define metrics, KPIs, and analytical needs",
+      "2. Build reports and dashboards that align with business processes and goals",
+      "3. Conduct root-cause analysis and opportunity sizing for business initiatives",
+      "4. Design and evaluate A/B tests and experiments to measure impact",
+      "5. Translate insights into business recommendations and implementation plans",
+      "6. Partner with engineering to improve data availability and usability",
+      "7. Maintain data dictionaries, process documentation, and self-serve resources",
+      "8. Educate stakeholders on data literacy and best practices"
+    ]
+  },
+  {
+    "role": "Data Scientist",
+    "meeting": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      15,
+      20,
+      21
+    ],
+    "job responsibility": [
+      "1. Develop statistical and machine learning models to solve business problems",
+      "2. Explore, clean, and engineer features from diverse and noisy datasets",
+      "3. Design experiments, evaluate models rigorously, and quantify uncertainty",
+      "4. Collaborate with engineering to productionize models and data pipelines",
+      "5. Communicate complex findings to non-technical audiences with clarity",
+      "6. Monitor deployed models for drift and performance degradation",
+      "7. Document methodologies, assumptions, and limitations for reproducibility",
+      "8. Stay current with advances in ML, causal inference, and AI tooling"
+    ]
+  },
+  {
+    "role": "Data Architect",
+    "meeting": [
+      2,
+      5,
+      8,
+      9,
+      10,
+      15,
+      21,
+      23,
+      27
+    ],
+    "job responsibility": [
+      "1. Design enterprise data architectures that enable analytics and ML at scale",
+      "2. Define data models, integration patterns, and governance standards",
+      "3. Select and evaluate storage, processing, and streaming technologies",
+      "4. Ensure data quality, lineage, and cataloging across the ecosystem",
+      "5. Establish security, privacy, and compliance requirements for data platforms",
+      "6. Guide teams on best practices for ingestion, modeling, and consumption",
+      "7. Review designs and conduct architecture reviews for data initiatives",
+      "8. Document reference architectures, roadmaps, and standards"
+    ]
+  },
+  {
+    "role": "Data Visualization Engineer",
+    "meeting": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      15,
+      21,
+      24
+    ],
+    "job responsibility": [
+      "1. Design and implement interactive, accessible data visualizations and dashboards",
+      "2. Translate analytical insights into intuitive visual narratives and UI patterns",
+      "3. Optimize rendering performance for large datasets and real-time updates",
+      "4. Develop reusable charting components and visualization libraries",
+      "5. Ensure accessibility, color contrast, and responsive layout best practices",
+      "6. Collaborate with analysts and designers to iterate on visual designs",
+      "7. Instrument usage analytics and improve adoption and usability over time",
+      "8. Document visualization standards and component usage guidelines"
+    ]
+  },
+  {
+    "role": "Data Governance Specialist",
+    "meeting": [
+      2,
+      5,
+      8,
+      9,
+      15,
+      21,
+      23,
+      27
+    ],
+    "job responsibility": [
+      "1. Define and enforce data governance policies, roles, and processes",
+      "2. Establish data ownership, stewardship, and quality management practices",
+      "3. Implement data cataloging, lineage tracking, and metadata management",
+      "4. Ensure compliance with privacy and regulatory frameworks (e.g., GDPR, HIPAA)",
+      "5. Coordinate data access controls, retention, and classification schemes",
+      "6. Facilitate data council meetings and drive policy adoption across teams",
+      "7. Monitor governance KPIs and report on data risks and remediation",
+      "8. Maintain documentation, standards, and training for data governance"
+    ]
+  },
+  {
+    "role": "ETL Developer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Design and implement reliable ETL/ELT jobs for batch and streaming data",
+      "2. Develop scalable transformations with proper validation and error handling",
+      "3. Optimize extraction and load strategies for performance and cost efficiency",
+      "4. Implement data quality checks, reconciliation, and alerting mechanisms",
+      "5. Manage job orchestration, dependencies, and scheduling with observability",
+      "6. Collaborate with data engineers and analysts on data modeling and schema design",
+      "7. Version and document pipelines, mappings, and operational runbooks",
+      "8. Troubleshoot failures and ensure SLAs and data freshness targets are met"
+    ]
+  },
+  {
+    "role": "Analytics Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26
+    ],
+    "job responsibility": [
+      "1. Transform raw data into clean, documented, and discoverable datasets for analysts",
+      "2. Implement modular SQL models, tests, and documentation using modern tooling",
+      "3. Define metrics, semantics, and contracts to align analytics across teams",
+      "4. Optimize query performance and cost while maintaining reliability",
+      "5. Collaborate with data platform teams to improve pipelines and quality",
+      "6. Build and maintain semantic layers, data marts, and reusable components",
+      "7. Establish CI for analytics code and monitor freshness and test coverage",
+      "8. Document models, assumptions, and change management processes"
+    ]
+  },
+  {
+    "role": "Big Data Engineer",
+    "meeting": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      21,
+      23,
+      26,
+      27
+    ],
+    "job responsibility": [
+      "1. Build and manage distributed data processing systems for large-scale workloads",
+      "2. Develop streaming and batch pipelines using scalable frameworks and services",
+      "3. Optimize data storage formats, partitioning, and resource usage for cost and speed",
+      "4. Implement observability, data quality, and reliability at petabyte scale",
+      "5. Ensure security, compliance, and access controls in multi-tenant environments",
+      "6. Collaborate on capacity planning, performance testing, and incident response",
+      "7. Automate infrastructure provisioning and cluster operations with IaC",
+      "8. Document architecture, SLAs, and operational guidelines for big data platforms"
+    ]
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "meeting": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11,
+      15,
+      20,
+      21,
+      23,
+      26
+    ],
+    "job responsibility": [
+      "1. Design, develop, and deploy scalable machine learning models to solve business problems and improve decision-making",
+      "2. Collect, clean, and preprocess large datasets from multiple sources to ensure data quality and consistency",
+      "3. Implement, evaluate, and optimize algorithms using frameworks such as TensorFlow, PyTorch, or Scikit-learn",
+      "4. Collaborate with data scientists, software engineers, and business stakeholders to translate requirements into ML solutions",
+      "5. Monitor model performance in production and perform regular retraining or fine-tuning as necessary",
+      "6. Develop APIs and pipelines to integrate ML models with existing systems and applications",
+      "7. Conduct A/B testing and statistical analysis to measure the effectiveness of deployed models",
+      "8. Stay updated with the latest advancements in machine learning, deep learning, and data science techniques",
+      "9. Document technical processes, model architectures, and experiment results for reproducibility and knowledge sharing",
+      "10. Ensure compliance with data privacy, security, and ethical AI standards during all stages of the ML lifecycle"
+    ]
+  }
+]
