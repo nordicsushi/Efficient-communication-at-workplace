@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import random
 import re
 from pathlib import Path
 
@@ -49,9 +50,12 @@ def main():
         default="Machine Learning Engineer",
         help="Example field: Machine Learning Engineer",
     )
-    parser.add_argument("--yoe", default="3", help="Example field: years of experience")
     parser.add_argument("--jr", default="", help="Example field: job responsibilities")
-    parser.add_argument("--company", default="OpenAI", help="Example field: company")
+    ## meeting_ids
+    parser.add_argument(
+        "--meeting_ids",
+        help="Example field: meeting ids the user will attend",
+    )
 
     args = parser.parse_args()
 
@@ -65,10 +69,19 @@ def main():
     # Then override with example fields
     if args.job is not None:
         ctx["job"] = args.job
-    if args.yoe is not None:
-        ctx["yoe"] = args.yoe
-    if args.company is not None:
-        ctx["company"] = args.company
+    if args.jr is not None:
+        ctx["jr"] = args.jr
+    if args.meeting_ids is not None:
+        ctx["meeting_ids"] = args.meeting_ids
+
+    if "senior" in args.job.lower():
+        ctx["yoe"] = random.uniform(4, 8)
+    elif "lead" in args.job.lower() or "principal" in args.job.lower():
+        ctx["yoe"] = random.uniform(8, 15)
+    else:
+        ctx["yoe"] = random.uniform(1, 4)
+
+    ctx["company"] = "A tech company based in Silicon Valley"
 
     ctx_validated = validate_input(ctx)
     # Read template
