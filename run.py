@@ -26,5 +26,3 @@ for role in role_meeting_type:
     os.system(
         f'copilot --model {MODEL} --allow-all-tools -p "Complete the task in the coordinator.md."'
     )
-
-    break

@@ -25,11 +25,12 @@ The automated script allows you to generate personalized communication guides th
 
 ## 🚀 How to Run
 
-This project includes an automated script to generate customized coordinator documents based on your job role, experience, and company.
+This project includes automated scripts to generate customized communication guides for multiple job roles and meeting types.
 
 ### Prerequisites
 - Python 3.10 or higher
-- [GitHub Copilot CLI](https://docs.github.com/en/copilot/concepts/agents/about-copilot-cli)
+- `uv` package manager (or `pip`)
+- GitHub Copilot CLI (for AI-assisted task completion)
 
 ### Quick Start
 
@@ -39,20 +40,47 @@ This project includes an automated script to generate customized coordinator doc
    cd Efficient-communication-at-workplace
    ```
 
-2. **Run the automation script:**
+2. **Install dependencies:**
    ```bash
-   chmod +x run.sh
-   ./run.sh --job "Software Engineer" --yoe 5 --company "Google"
+   make install
    ```
 
-3. **Customize with different parameters:**
+3. **Run the automation script:**
    ```bash
-   # Specify AI model (default: claude-sonnet-4.5)
-   ./run.sh --model "claude-sonnet-4" --job "Machine Learning Engineer" --yoe 3 --company "OpenAI"
-   
-   # With multi-word job responsibilities
-   ./run.sh --jr "Lead technical architecture and mentor junior developers" --yoe 8 --company "Meta"
+   make run
    ```
+
+### Available Make Commands
+
+- `make install` - Set up Python environment and install dependencies
+- `make run` - Execute the batch processing workflow for all predefined roles
+
+### Behind the Scenes
+
+1. **Environment Setup** (`make install`):
+   - Creates a Python virtual environment (`.venv`)
+   - Installs required dependencies from `requirements.txt`
+
+2. **Batch Processing** (`make run`):
+   - Loads job roles from `data/role_meeting_type.json`
+   - For each role, generates a customized `coordinator.md`
+   - Runs GitHub Copilot CLI with claude-sonnet-4.5 model
+   - Automatically completes communication guide tasks
+
+### Manual Usage
+
+If you prefer to run components separately:
+
+```bash
+# Set up environment
+make install
+
+# Generate coordinator for a specific role
+python render_prompts.py --job "DevOps Engineer" --yoe 4 --company "Netflix" --jr "Manage CI/CD pipelines and infrastructure"
+
+# View the generated file
+cat coordinator.md
+```
 
 ## 📖 How to Use the Resources
 
